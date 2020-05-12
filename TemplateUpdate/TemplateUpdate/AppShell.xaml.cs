@@ -12,7 +12,12 @@ namespace TemplateUpdate
             InitializeComponent();
             Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
             Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
-            
+            CurrentItem = login;
+        }
+
+        private async void MenuItem_Clicked(object sender, EventArgs e)
+        {
+            await GoToAsync("//Login");
         }
     }
 }
