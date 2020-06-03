@@ -9,48 +9,47 @@
              xmlns:local="clr-namespace:NewApp.ViewModels"
              x:Name="BrowseItemsPage">
 
-	<ContentPage.ToolbarItems>
-		<ToolbarItem Text="Add" Command="{Binding AddItemCommand}" />
-	</ContentPage.ToolbarItems>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add" Command="{Binding AddItemCommand}" />
+    </ContentPage.ToolbarItems>
 
-	<RefreshView Command="{Binding LoadItemsCommand}"
-					 IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
-		<CollectionView x:Name="ItemsListView"
-                ItemsSource="{Binding Items}"			
-				SelectionMode="None">
-			<d:CollectionView.ItemsSource>
-				<x:Array Type="{x:Type x:String}">
-					<x:String>First Item</x:String>
-					<x:String>Second Item</x:String>
-					<x:String>Third Item</x:String>
-					<x:String>Fourth Item</x:String>
-					<x:String>Fifth Item</x:String>
-					<x:String>Sixth Item</x:String>
-				</x:Array>
-			</d:CollectionView.ItemsSource>
-			<CollectionView.ItemTemplate>
-				<DataTemplate>
-					<StackLayout Padding="10">
-						<Label Text="{Binding Text}" 
+    <RefreshView Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+        <CollectionView x:Name="ItemsListView"
+                ItemsSource="{Binding Items}"
+                SelectionMode="None">
+            <d:CollectionView.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>First Item</x:String>
+                    <x:String>Second Item</x:String>
+                    <x:String>Third Item</x:String>
+                    <x:String>Fourth Item</x:String>
+                    <x:String>Fifth Item</x:String>
+                    <x:String>Sixth Item</x:String>
+                </x:Array>
+            </d:CollectionView.ItemsSource>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Padding="10">
+                        <Label Text="{Binding Text}" 
                             d:Text="{Binding .}"
                             LineBreakMode="NoWrap" 
                             Style="{DynamicResource ListItemTextStyle}" 
                             FontSize="16" />
-						<Label Text="{Binding Description}" 
+                        <Label Text="{Binding Description}" 
                             d:Text="Item description"
                             LineBreakMode="NoWrap"
                             Style="{DynamicResource ListItemDetailTextStyle}"
                             FontSize="13" />
-						<StackLayout.GestureRecognizers>
-							<TapGestureRecognizer 
-								NumberOfTapsRequired="1"
-								Command="{Binding Source={RelativeSource AncestorType={x:Type local:ItemsViewModel}}, Path=ItemTapped}"		
-								CommandParameter="{Binding .}">								
-							</TapGestureRecognizer>
-						</StackLayout.GestureRecognizers>
-					</StackLayout>
-				</DataTemplate>
-			</CollectionView.ItemTemplate>
-		</CollectionView>
-	</RefreshView>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer 
+                                NumberOfTapsRequired="1"
+                                Command="{Binding Source={RelativeSource AncestorType={x:Type local:ItemsViewModel}}, Path=ItemTapped}"		
+                                CommandParameter="{Binding .}">
+                            </TapGestureRecognizer>
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </RefreshView>
 </ContentPage>
