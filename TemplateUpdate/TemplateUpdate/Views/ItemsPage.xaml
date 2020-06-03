@@ -4,9 +4,9 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="TemplateUpdate.Views.ItemsPage"
+             x:Class="NewApp.Views.ItemsPage"
              Title="{Binding Title}"
-             xmlns:local="clr-namespace:TemplateUpdate.ViewModels"
+             xmlns:local="clr-namespace:NewApp.ViewModels"
              x:Name="BrowseItemsPage">
 
 	<ContentPage.ToolbarItems>

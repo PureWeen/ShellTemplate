@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TemplateUpdate.Models
+namespace NewApp.Models
 {
     public class Item
     {

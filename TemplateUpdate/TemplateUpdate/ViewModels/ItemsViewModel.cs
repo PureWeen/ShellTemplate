@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 
-using TemplateUpdate.Models;
-using TemplateUpdate.Views;
+using NewApp.Models;
+using NewApp.Views;
 
-namespace TemplateUpdate.ViewModels
+namespace NewApp.ViewModels
 {
     public class ItemsViewModel : BaseViewModel
     {

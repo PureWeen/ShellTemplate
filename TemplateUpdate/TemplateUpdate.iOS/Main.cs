@@ -5,7 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace TemplateUpdate.iOS
+namespace NewApp.iOS
 {
     public class Application
     {

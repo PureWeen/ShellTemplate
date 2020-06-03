@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-using TemplateUpdate.Models;
-using TemplateUpdate.Views;
-using TemplateUpdate.ViewModels;
+using NewApp.Models;
+using NewApp.Views;
+using NewApp.ViewModels;
 
-namespace TemplateUpdate.Views
+namespace NewApp.Views
 {
     // Learn more about making custom code visible in the Xamarin.Forms previewer
     // by visiting https://aka.ms/xamarinforms-previewer

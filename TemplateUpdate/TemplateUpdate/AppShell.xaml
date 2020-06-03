@@ -4,9 +4,9 @@
        xmlns:d="http://xamarin.com/schemas/2014/forms/design"
        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
        mc:Ignorable="d"
-       xmlns:local="clr-namespace:TemplateUpdate.Views"
-       Title="TemplateUpdate"
-       x:Class="TemplateUpdate.AppShell">
+       xmlns:local="clr-namespace:NewApp.Views"
+       Title="NewApp"
+       x:Class="NewApp.AppShell">
 
     <!-- 
         Styles and Resources 

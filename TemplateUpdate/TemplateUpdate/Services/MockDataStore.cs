@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using TemplateUpdate.Models;
+using NewApp.Models;
 
-namespace TemplateUpdate.Services
+namespace NewApp.Services
 {
     public class MockDataStore : IDataStore<Item>
     {

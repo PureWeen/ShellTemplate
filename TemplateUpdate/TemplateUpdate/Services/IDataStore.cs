@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace TemplateUpdate.Services
+namespace NewApp.Services
 {
     public interface IDataStore<T>
     {

@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
-using TemplateUpdate.Models;
+using NewApp.Models;
 using Xamarin.Forms;
 
-namespace TemplateUpdate.ViewModels
+namespace NewApp.ViewModels
 {
     public class NewItemPageViewModel : BaseViewModel
     {

@@ -1,10 +1,10 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using TemplateUpdate.Services;
-using TemplateUpdate.Views;
+using NewApp.Services;
+using NewApp.Views;
 
-namespace TemplateUpdate
+namespace NewApp
 {
     public partial class App : Application
     {

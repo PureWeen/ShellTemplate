@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using TemplateUpdate.ViewModels;
-using TemplateUpdate.Views;
+using NewApp.ViewModels;
+using NewApp.Views;
 using Xamarin.Forms;
 
-namespace TemplateUpdate
+namespace NewApp
 {
     public partial class AppShell : Xamarin.Forms.Shell
     {

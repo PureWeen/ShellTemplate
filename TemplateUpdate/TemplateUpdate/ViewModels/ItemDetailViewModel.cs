@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
-using TemplateUpdate.Models;
+using NewApp.Models;
 using Xamarin.Forms;
 
-namespace TemplateUpdate.ViewModels
+namespace NewApp.ViewModels
 {
     [QueryProperty("ItemId", "ItemId")]
     public class ItemDetailViewModel : BaseViewModel
