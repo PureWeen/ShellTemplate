@@ -37,12 +37,28 @@
                         <VisualStateGroup x:Name="CommonStates">
                             <VisualState x:Name="Normal">
                                 <VisualState.Setters>
-                                    <Setter Property="BackgroundColor" Value="#882196F3" />
+                                    <Setter Property="BackgroundColor" Value="White" />
+                                    <Setter TargetName="FlyoutItemLabel" Property="Label.TextColor" Value="{StaticResource Primary}" />
                                 </VisualState.Setters>
                             </VisualState>
                             <VisualState x:Name="Selected">
                                 <VisualState.Setters>
                                     <Setter Property="BackgroundColor" Value="{StaticResource Primary}" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+            </Style>
+
+
+            <Style Class="MenuItemLayoutStyle" TargetType="Layout" ApplyToDerivedTypes="True">
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter TargetName="FlyoutItemLabel" Property="Label.TextColor" Value="{StaticResource Primary}" />
                                 </VisualState.Setters>
                             </VisualState>
                         </VisualStateGroup>
@@ -61,18 +77,12 @@
             <ShellContent Route="About" ContentTemplate="{DataTemplate local:AboutPage}" />
         </Tab>        
     </FlyoutItem>
-    <MenuItem Text="Logout" Clicked="MenuItem_Clicked">
-        
+    <MenuItem Text="Logout" StyleClass="MenuItemLayoutStyle" Command="{Binding LogoutCommand}">
     </MenuItem>
 
 
     <TabBar Route="Login" x:Name="login">
-        <Tab Title="Login" Icon="tab_feed.png">
-            <ShellContent ContentTemplate="{DataTemplate local:LoginPage}" />
-        </Tab>
-        <Tab Title="About" Icon="tab_about.png">
-            <ShellContent ContentTemplate="{DataTemplate local:AboutPage}" />
-        </Tab>
+        <ShellContent ContentTemplate="{DataTemplate local:LoginPage}" />
     </TabBar>
 
 
