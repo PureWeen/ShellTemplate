@@ -15,7 +15,7 @@ namespace NewApp.ViewModels
 
         private async void OnLogout(object obj)
         {
-            await Shell.Current.GoToAsync("//Login");
+            await Shell.Current.GoToAsync("//LoginPage");
         }
     }
 }

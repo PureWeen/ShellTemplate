@@ -28,13 +28,6 @@ namespace NewApp.ViewModels
             ItemTapped = new Command<Item>(OnItemSelected);
 
             AddItemCommand = new Command(OnAddItem);
-
-            MessagingCenter.Subscribe<NewItemPageViewModel, Item>(this, "AddItem", async (obj, item) =>
-            {
-                var newItem = item as Item;
-                Items.Add(newItem);
-                await DataStore.AddItemAsync(newItem);
-            });
         }
 
         async Task ExecuteLoadItemsCommand()
@@ -78,7 +71,7 @@ namespace NewApp.ViewModels
 
         private async void OnAddItem(object obj)
         {
-            await Shell.Current.GoToAsync("NewItemPage");
+            await Shell.Current.GoToAsync(nameof(NewItemPage));
         }
 
         async void OnItemSelected(Item item)
@@ -86,7 +79,8 @@ namespace NewApp.ViewModels
             if (item == null)
                 return;
 
-            await Shell.Current.GoToAsync($"ItemDetailPage?ItemId={item.Id}");
+            // This will push the ItemDetailPage onto the navigation stack
+            await Shell.Current.GoToAsync($"{nameof(ItemDetailPage)}?{nameof(ItemDetailViewModel.ItemId)}={item.Id}");
         }
     }
 }

@@ -15,7 +15,7 @@ namespace NewApp.Views
         public LoginPage()
         {
             InitializeComponent();
-            this.BindingContext = new LoginPageViewModel();
+            this.BindingContext = new LoginViewModel();
         }
     }
 }

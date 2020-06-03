@@ -19,7 +19,7 @@ namespace NewApp.Views
         public NewItemPage()
         {
             InitializeComponent();
-            BindingContext = new NewItemPageViewModel();
+            BindingContext = new NewItemViewModel();
         }
     }
 }

@@ -6,7 +6,7 @@ using Xamarin.Forms;
 
 namespace NewApp.ViewModels
 {
-    [QueryProperty("ItemId", "ItemId")]
+    [QueryProperty(nameof(ItemId), nameof(ItemId))]
     public class ItemDetailViewModel : BaseViewModel
     {
         private string itemId;
@@ -17,19 +17,13 @@ namespace NewApp.ViewModels
         public string Text
         {
             get => text;
-            set
-            {
-                SetProperty(ref text, value);
-            }
+            set => SetProperty(ref text, value);
         }
 
         public string Description
         {
             get => description;
-            set
-            {
-                SetProperty(ref description, value);
-            }
+            set => SetProperty(ref description, value);
         }
 
         public string ItemId
@@ -43,7 +37,7 @@ namespace NewApp.ViewModels
                 itemId = value;
                 LoadItemId(value);
             }
-        }
+        }        
 
         public async void LoadItemId(string itemId)
         {

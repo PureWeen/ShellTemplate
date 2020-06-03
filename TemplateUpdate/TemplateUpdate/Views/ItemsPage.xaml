@@ -6,14 +6,15 @@
              mc:Ignorable="d"
              x:Class="NewApp.Views.ItemsPage"
              Title="{Binding Title}"
-             xmlns:local="clr-namespace:NewApp.ViewModels"
+             xmlns:local="clr-namespace:NewApp.ViewModels"  
+             xmlns:model="clr-namespace:NewApp.Models"  
              x:Name="BrowseItemsPage">
 
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Add" Command="{Binding AddItemCommand}" />
     </ContentPage.ToolbarItems>
-
-    <RefreshView Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+    <!--https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/data-binding/compiled-bindings-->
+    <RefreshView x:DataType="local:ItemsViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
         <CollectionView x:Name="ItemsListView"
                 ItemsSource="{Binding Items}"
                 SelectionMode="None">
@@ -29,7 +30,7 @@
             </d:CollectionView.ItemsSource>
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <StackLayout Padding="10">
+                    <StackLayout Padding="10" x:DataType="model:Item">
                         <Label Text="{Binding Text}" 
                             d:Text="{Binding .}"
                             LineBreakMode="NoWrap" 

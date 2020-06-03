@@ -68,24 +68,25 @@
         </ResourceDictionary>
     </Shell.Resources>
 
-    <!-- Your Pages -->
+    <!-- 
+        When the Flyout is visible this defines the content to display in the flyout.
+        FlyoutDisplayOptions="AsMultipleItems" will create a separate flyout item for each child element    
+        https://docs.microsoft.com/en-us/dotnet/api/xamarin.forms.shellgroupitem.flyoutdisplayoptions?view=xamarin-forms
+    -->
     <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
-        <Tab Title="Browse" Icon="tab_feed.png" Route="Browse">
-            <ShellContent ContentTemplate="{DataTemplate local:ItemsPage}" />
-        </Tab>
-        <Tab Title="About" Icon="tab_about.png">
-            <ShellContent Route="About" ContentTemplate="{DataTemplate local:AboutPage}" />
-        </Tab>        
+        <ShellContent Title="About" Icon="tab_about.png" Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" />
+        <ShellContent Title="Browse" Icon="tab_feed.png" ContentTemplate="{DataTemplate local:ItemsPage}" />
     </FlyoutItem>
+
+    <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->
     <MenuItem Text="Logout" StyleClass="MenuItemLayoutStyle" Command="{Binding LogoutCommand}">
     </MenuItem>
 
-
-    <TabBar Route="Login" x:Name="login">
-        <ShellContent ContentTemplate="{DataTemplate local:LoginPage}" />
-    </TabBar>
-
-
+    <!-- 
+        This defines content that won't show up in your flyout menu. When this content is active the flyout menu won't be available.
+        This is useful for creating areas of the application where you don't want users to be able to navigate out of.    
+    -->
+    <ShellContent Route="LoginPage" Shell.FlyoutBehavior="Disabled" ContentTemplate="{DataTemplate local:LoginPage}" />
 
     <!-- Optional Templates 
     // These may be provided inline as below or as separate classes.

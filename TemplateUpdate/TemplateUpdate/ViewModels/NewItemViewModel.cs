@@ -7,12 +7,12 @@ using Xamarin.Forms;
 
 namespace NewApp.ViewModels
 {
-    public class NewItemPageViewModel : BaseViewModel
+    public class NewItemViewModel : BaseViewModel
     {
-        private string _text;
-        private string _description;
+        private string text;
+        private string description;
 
-        public NewItemPageViewModel()
+        public NewItemViewModel()
         {
             SaveCommand = new Command(OnSave, ValidateSave);
             CancelCommand = new Command(OnCancel);
@@ -22,20 +22,20 @@ namespace NewApp.ViewModels
 
         private bool ValidateSave()
         {
-            return !String.IsNullOrWhiteSpace(_text)
-                && !String.IsNullOrWhiteSpace(_description);
+            return !String.IsNullOrWhiteSpace(text)
+                && !String.IsNullOrWhiteSpace(description);
         }
 
         public string Text
         {
-            get => _text;
-            set => SetProperty(ref _text, value);
+            get => text;
+            set => SetProperty(ref text, value);
         }
 
         public string Description
         {
-            get => _description;
-            set => SetProperty(ref _description, value);
+            get => description;
+            set => SetProperty(ref description, value);
         }
 
         public Command SaveCommand { get; }
@@ -43,6 +43,7 @@ namespace NewApp.ViewModels
 
         private async void OnCancel()
         {
+            // This will pop the current page off the navigation stack
             await Shell.Current.GoToAsync("..");
         }
 
@@ -54,8 +55,10 @@ namespace NewApp.ViewModels
                 Text = Text,
                 Description = Description
             };
+            
+            await DataStore.AddItemAsync(newItem);
 
-            MessagingCenter.Send(this, "AddItem", newItem);
+            // This will pop the current page off the navigation stack
             await Shell.Current.GoToAsync("..");
         }
     }
