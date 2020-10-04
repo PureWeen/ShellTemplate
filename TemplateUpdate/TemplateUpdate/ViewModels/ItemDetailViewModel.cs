@@ -37,7 +37,7 @@ namespace NewApp.ViewModels
                 itemId = value;
                 LoadItemId(value);
             }
-        }        
+        }
 
         public async void LoadItemId(string itemId)
         {

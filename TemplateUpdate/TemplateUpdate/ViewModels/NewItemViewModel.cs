@@ -16,7 +16,7 @@ namespace NewApp.ViewModels
         {
             SaveCommand = new Command(OnSave, ValidateSave);
             CancelCommand = new Command(OnCancel);
-            this.PropertyChanged += 
+            this.PropertyChanged +=
                 (_, __) => SaveCommand.ChangeCanExecute();
         }
 
@@ -55,7 +55,7 @@ namespace NewApp.ViewModels
                 Text = Text,
                 Description = Description
             };
-            
+
             await DataStore.AddItemAsync(newItem);
 
             // This will pop the current page off the navigation stack

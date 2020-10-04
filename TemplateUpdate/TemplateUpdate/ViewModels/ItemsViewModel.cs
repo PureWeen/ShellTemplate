@@ -16,7 +16,7 @@ namespace NewApp.ViewModels
 
         public ObservableCollection<Item> Items { get; }
         public Command LoadItemsCommand { get; }
-        public Command AddItemCommand { get;  }
+        public Command AddItemCommand { get; }
         public Command<Item> ItemTapped { get; }
 
         public ItemsViewModel()
