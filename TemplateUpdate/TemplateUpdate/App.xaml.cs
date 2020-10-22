@@ -1,8 +1,8 @@
-﻿using System;
+﻿using NewApp.Services;
+using NewApp.Views;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using NewApp.Services;
-using NewApp.Views;
 
 namespace NewApp
 {

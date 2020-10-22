@@ -1,7 +1,7 @@
-﻿using System;
+﻿using NewApp.Models;
+using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
-using NewApp.Models;
 using Xamarin.Forms;
 
 namespace NewApp.ViewModels

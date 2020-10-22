@@ -1,8 +1,8 @@
-﻿using System;
+﻿using NewApp.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using NewApp.Models;
 
 namespace NewApp.Services
 {

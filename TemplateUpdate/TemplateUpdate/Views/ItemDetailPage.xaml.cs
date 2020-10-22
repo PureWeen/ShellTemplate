@@ -1,6 +1,6 @@
-﻿using System.ComponentModel;
+﻿using NewApp.ViewModels;
+using System.ComponentModel;
 using Xamarin.Forms;
-using NewApp.ViewModels;
 
 namespace NewApp.Views
 {

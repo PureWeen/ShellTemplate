@@ -1,12 +1,10 @@
-﻿using System;
+﻿using NewApp.Models;
+using NewApp.Views;
+using System;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
-
-using NewApp.Models;
-using NewApp.Views;
 
 namespace NewApp.ViewModels
 {

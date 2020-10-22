@@ -1,8 +1,8 @@
-﻿using System;
+﻿using NewApp.Models;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
-using NewApp.Models;
 using Xamarin.Forms;
 
 namespace NewApp.ViewModels

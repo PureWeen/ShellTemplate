@@ -1,7 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using NewApp.ViewModels;
+﻿using NewApp.ViewModels;
 using NewApp.Views;
+using System;
+using System.Collections.Generic;
 using Xamarin.Forms;
 
 namespace NewApp
